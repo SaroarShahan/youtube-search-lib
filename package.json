@@ -1,0 +1,21 @@
+{
+  "name": "youtube-search-lib",
+  "version": "1.0.0",
+  "description": "A module for searching youtube videos",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SaroarShahan/youtube-search-lib"
+  },
+  "keywords": [
+    "youtube",
+    "search",
+    "api"
+  ],
+  "author": "Saroar Hossain Shahan",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18.0"
+  }
+}
