@@ -13,7 +13,8 @@ module.exports = function(opts, cb) {
     maxResults: opts.maxResults || 20
   };
 
-  axios(URL, { params: params })
+  axios
+    .get(URL, { params })
     .then(function(res) {
       if (cb) {
         cb(res.data.items);

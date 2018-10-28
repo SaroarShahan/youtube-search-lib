@@ -13,6 +13,7 @@
     "search",
     "api"
   ],
+  "homepage": "https://github.com/SaroarShahan/youtube-search-lib#readme",
   "author": "Saroar Hossain Shahan",
   "license": "MIT",
   "dependencies": {
