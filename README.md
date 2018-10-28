@@ -2,7 +2,9 @@
 You can easily search for videos on Youtube using their v3 API.
 
 ## install
+```sh
 npm i youtube-search-lib
+```
 
 ## Options
 You can pass four optional parameters as the second parameter. Such as, part, query, key, maxResults.
