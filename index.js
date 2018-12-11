@@ -1,26 +1,22 @@
-var axios = require("axios");
+const axios = require("axios");
 
-var URL = `https://www.googleapis.com/youtube/v3/search`;
+const URL = `https://www.googleapis.com/youtube/v3/search`;
 
-module.exports = function(opts, cb) {
+module.exports = function(opts) {
   if (!opts.key) throw new Error("Youtube search expected API key!");
 
-  var params = {
+  const params = {
     type: "video",
     part: opts.part || "snippet",
     q: opts.term,
     key: opts.key,
-    maxResults: opts.maxResults || 20
+    maxResults: opts.maxResults || 500
   };
 
-  axios
-    .get(URL, { params })
-    .then(function(res) {
-      if (cb) {
-        cb(res.data.items);
-      }
-    })
-    .catch(function(error) {
-      console.log(error);
-    });
+  return new Promise((resolve, reject) => {
+    axios
+      .get(URL, { params })
+      .then(res => resolve(res.data.items))
+      .catch(error => reject(error));
+  });
 };
